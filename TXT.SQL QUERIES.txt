@@ -1,0 +1,17 @@
+1.
+SELECT  P.ProductID,P.productName,S.SupplierID,S.supplierName,P.categoryID
+FROM Products P
+JOIN Suppliers S
+ON P.SupplierID = S.SupplierID
+WHERE S.SupplierName LIKE 'TOKYO TRADERS';
+
+
+
+2.
+SELECT C.CustomerName,count(CustomerName) as OrdeCount
+FROM Customers c
+JOIN Orders O
+ON C.Customer ID = O.CustomerID
+GROUP BY 1
+ORDER BY 2 DESC
+LIMIT 1;
